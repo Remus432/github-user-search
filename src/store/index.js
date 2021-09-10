@@ -4,8 +4,8 @@ import { lightTheme, darkTheme } from "../variables"
 
 const state = reactive({
  user: {},
- theme: {...lightTheme},
- currTheme: "light",
+ theme: {...darkTheme},
+ currTheme: "dark",
  username: "octocat",
  isFocused: false,
  errMsg: ""
