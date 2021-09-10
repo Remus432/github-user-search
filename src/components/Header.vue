@@ -1,11 +1,11 @@
 <template>
-  <div class="header">
+  <header class="header">
     <p :style="{ color: store.state.theme.headline }" class="logo">devfinder</p>
     <div class="theme">
       <span :style="{ color: store.state.theme.headline }">{{store.state.currTheme === "light" ? "Dark" : "Light"}}</span>
       <img @click="store.methods.toggleTheme" :src="store.state.theme.icon" alt="Dark Theme Icon" class="theme-icon">
     </div>
-  </div>
+  </header>
 </template>
 
 <script>

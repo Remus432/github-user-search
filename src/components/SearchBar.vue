@@ -1,5 +1,5 @@
 <template>
-  <div ref="searchbar" :style="{ backgroundColor: store.state.theme.card }" class="bar">
+  <nav ref="searchbar" :style="{ backgroundColor: store.state.theme.card }" class="bar">
     <div class="search">
       <img src="../assets/icon-search.svg" alt="Search Glass Icon" class="search-icon">
       <input 
@@ -12,7 +12,7 @@
     </div>
     <span class="err">{{ store.state.errMsg }}</span>
     <button @click="store.methods.searchUser(this.$refs.username.value)" class="search-btn">Search</button>
-  </div>
+  </nav>
 </template>
 
 <script>
