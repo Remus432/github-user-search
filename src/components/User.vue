@@ -1,4 +1,5 @@
 <template>
+  <main>
   <div ref="card" :class="`user ${[store.state.currTheme === 'light' ? 'light-shadow' : '']}`">
     <div class="user-bg" :style="{ backgroundColor: store.state.theme.card, opacity: store.state.isFocused ? .3 : 1 }"></div>
     <div class="user-info">
@@ -53,6 +54,7 @@
       </div>
     </div>
   </div>  
+  </main>
 </template>
 
 <script>
