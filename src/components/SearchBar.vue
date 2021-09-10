@@ -41,7 +41,7 @@
   /* Search Bar */
   .bar {
     background-color: #fff;
-    padding: .8rem;
+    padding: 1rem;
     border-radius: 1.8rem;
     box-shadow: 0 16px 30px -10px rgba(70,96,187, .2);
     margin-bottom: 2rem;
@@ -71,7 +71,7 @@
   /* Search Input */
   .search-input {
     font-size: 1.4rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     border: none;
     background: none;
     width: 60%;

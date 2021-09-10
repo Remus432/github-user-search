@@ -65,10 +65,6 @@
     z-index: -1;
   }
 
-  .app {
-    
-  }
-
   .unavailable {
     color: #C3CDDD!important;
   }
@@ -82,7 +78,7 @@
 
   @media (min-width: 1440px) {
     .app {
-      width: 730px;
+      width: 750px;
     }
   }
 </style>
