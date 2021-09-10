@@ -1,26 +1,90 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div :style="{ background: store.state.theme.bg }" class="bg"></div>
+  <div class="app">
+    <Header />
+    <SearchBar />
+    <User />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import SearchBar from "./components/SearchBar"
+  import Header from "./components/Header"
+  import User from "./components/User"
+  import { provide } from "vue"
+  import store from "@/store"
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      SearchBar,
+      Header,
+      User
+    },
+    setup() {
+      provide("store", store)
+
+      store.methods.searchUser()
+
+      return { store }
+    } 
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s ease-in;
+    transition-property: color, background-color, fill;
+  }
+
+  body {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .app {
+    padding: 2rem;
+    height: 100vh;
+    margin: auto;
+  }
+
+  .unavailable {
+    color: #C3CDDD!important;
+  }
+
+  @media (min-width: 768px) {
+    .app {
+      width: 85%;
+      padding: 4rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .app {
+      width: 730px;
+    }
+  }
 </style>
