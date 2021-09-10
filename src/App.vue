@@ -66,9 +66,7 @@
   }
 
   .app {
-    padding: 2rem;
-    height: 100vh;
-    margin: auto;
+    
   }
 
   .unavailable {
