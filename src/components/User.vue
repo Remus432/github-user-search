@@ -82,7 +82,7 @@
 
 <style scoped>
   .user {
-    padding: 2.5rem 2rem;
+    padding: 4rem;
     position: relative;
   }
 

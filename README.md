@@ -7,6 +7,8 @@
 
 Today's challenge was building the Github User Search web app. It's my first Vue project and one of the most interesting coding experiences so far.
 
+[Live Site](https://github-user-search-lime.vercel.app/)
+
 ## Technologies Used
 
 * **HTML5**
